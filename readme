@@ -1,0 +1,30 @@
+Neighborhood Map Application
+--------
+Description
+--------
+This map application combines the search and view details of five locations chosen from San Jose downtown area.
+When you dblclick the demou.html or drag the file into a browser, the map application will be loaded. The interface
+of the map application is simulated from the google map. You may have a familiar feeling of the map interface.
+
+Use
+--------
+At the beginning, the sidemenu is on by default, and nothing show in sections of the sidemenu. You could click any marker
+on the map or click the toggle button at top left corner next to input box and choose one location from the list.
+
+If a marker is clicked or any location in the list is chosen, the item in the list will be highlighted and the corresponding marker
+will bounce and show the name of the location on the map. At the same time, in the sidemenu, the location address, image,
+details information are shown in the sidemenu.
+
+there are two functional button, show and hide, which are used to show markers or hide markers.
+
+When you toggle to the list page, you could type into the input box and search for the location name. When you type in the input
+box, the app will filter the list and only show the items whose name match the key words you input in the box dynamically, even the key
+word is not complete and just a slice of the whole name. When you input location key word, there is also a input remind shown
+under the box only if your input match the item name from the beginning of the item name.
+
+Optimization
+--------
+The map application has been optimized and remove some situations that does not make sense. For example, the marker, detail,
+and list are inter-related and coordinated. When you click anywhere else on the map, it will stop marker action, clear all
+the content in the detail and stop highlighted content in the list. When you click the input box, the input box will be
+automatically empty. Also, there is only one active marker and corresponding information allowed at the same time.

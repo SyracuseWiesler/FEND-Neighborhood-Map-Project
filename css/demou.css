@@ -1,0 +1,243 @@
+@media all and (min-width:320px){
+    /*mobile*/
+    body {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        font-family: arial;
+    }
+
+    h3, p {
+        margin: 0;
+    }
+
+    .map {
+        z-index: 1;
+    }
+
+    .side_menu {
+        position: absolute;
+        z-index: 5;
+        width: 50%;
+        height: 100%;
+        border: 1px solid black;
+        padding: 10px 5px;
+        background-color: rgb(74, 192, 235);
+        box-sizing: border-box;
+    }
+
+    .side_menu input {
+        float: left;
+        margin: 0;
+        padding: 0;
+        width: 70%;
+        height: 30px;
+    }
+
+    .side_menu i {
+        font-size: 22px;
+        margin: 5px 5px 0 0;
+        float: left;
+    }
+
+    .side_menu i:hover {
+        cursor: pointer;
+    }
+
+    .side_menu form:after {
+        height: 0;
+        content: ".";
+        clear: both;
+        display: block;
+        visibility: hidden;
+    }
+
+    .side_menu .pic_background {
+        width: 100%;
+        height: 150px;
+        background: url("../img/background.png") center;
+        overflow: hidden;
+    }
+
+    .side_menu .info {
+        width: 100%;
+        height: 70px;
+        background-color: rgb(66, 133, 244);
+        color: white;
+        margin:0;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .info h3 {
+        font-size: 16px;
+    }
+
+    .info p {
+        font-size: 14px;
+    }
+
+    .tool_box div {
+        width: 50%;
+        height: 45px;
+        background-color: white;
+        float: left;
+    }
+
+    .tool_box div:hover {
+        cursor: pointer;
+        background-color: rgb(200, 200, 200);
+    }
+
+    .tool_box i, .tool_box span {
+        display: block;
+        margin: 0;
+        position: relative;
+    }
+
+    .tool_box span {
+        width: 50%;
+        left: 30%;
+    }
+
+    .tool_box i {
+        left: 35%;
+    }
+
+    .tool_box {
+        border-bottom: 1px solid gray;
+    }
+
+    .tool_box:after {
+        height: 0;
+        content: ".";
+        clear: both;
+        display: block;
+        visibility: hidden;
+    }
+
+    .detail {
+        width: 100%;
+        background-color: white;
+        box-sizing: border-box;
+        overflow: scroll;
+    }
+
+    .toggle_menu {
+        width: 30px;
+        height: 50px;
+        background: white;
+        position: absolute;
+        z-index: 99;
+        top: 10px;
+        box-shadow: 4px 4px 5px 1px gray;
+    }
+
+    .toggle_menu:hover {
+        cursor: pointer;
+    }
+
+    .toggle_menu i {
+        display: none;
+        margin: 12px 0 0 8px;
+    }
+
+    .list {
+        width: 100%;
+        background-color: rgb(247, 247, 247);
+        display: none;
+        border: 1px solid black;
+        margin-top: 20px;
+        max-height: 550px;
+        overflow: scroll;
+    }
+
+    .list ul {
+        margin: 0;
+        padding: 0;
+        list-style: outside none none;
+    }
+
+    .list ul li {
+        padding: 10px 5px;
+        border-bottom: 1px solid black;
+    }
+
+    .list ul li:hover {
+        background-color: dimgray;
+    }
+
+    div .active {
+        display: block;
+    }
+
+
+}
+@media all and (min-width:768px){
+    /*tablet*/
+
+    .side_menu input {
+        width: 75%;
+        height: 50px;
+    }
+
+    .side_menu i {
+        font-size: 40px;
+    }
+
+    .side_menu .pic_background {
+        height: 250px;
+    }
+
+    .side_menu .info {
+        height: 110px;
+    }
+
+    .tool_box div {
+        height: 90px;
+    }
+
+    .tool_box span {
+        left: 15%;
+        top: 60%;
+        font-size: 20px;
+    }
+
+    .tool_box i {
+        left: 40%;
+        top: 16%;
+    }
+
+    .toggle_menu {
+        height: 70px;
+    }
+
+    .list {
+        max-height: 490px;
+    }
+
+    .list ul li, .info p, .detail {
+        font-size: 20px;
+    }
+
+    .list ul li:hover {
+        cursor: pointer;
+    }
+
+    .info h3 {
+        font-size: 30px;
+    }
+}
+@media all and (min-width:992px){
+    /*desktop*/
+
+    .side_menu {
+        width: 40%;
+    }
+
+    .side_menu input {
+        width: 75%;
+    }
+}
+
+

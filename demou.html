@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>My Map</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/demou.css"/>
+    <!--<script type="text/javascript" src="./js/jquery-2.2.3.js"></script>-->
+    <!--<script src="./js/knockout-3.4.0.js"></script>-->
+    <!--<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCzmh5Og0nl6UvnZ_l-G66kU2J26X9999g&v=3"></script>-->
+    <!--<script type="text/javascript" src="./js/demou1.js"></script>-->
+
+</head>
+<body data-bind="event: {load: windowLoad(), resize: windowResize()}">
+
+<div class="side_menu">
+    <form action="" data-bind="submit: formSubmit">
+        <i class="fa fa-list" aria-hidden="true" data-bind="click: listClick"></i>
+        <input type="search" placeholder="Input a location..." list="aaa" autocomplete=on data-bind="value: inputValue, valueUpdate: 'afterkeydown', event: {click: inputClick, keyup: inputKeyUp}" />
+        <datalist id="aaa" data-bind="foreach: liContent">
+            <option value="" data-bind="value: $data.liContent"></option>
+        </datalist>
+        <i class="fa fa-search" aria-hidden="true" data-bind="click: searchClick"></i>
+    </form>
+    <div class="individual active" data-bind="style: {display: detailStatus}">
+        <div class="pic_background" data-bind="foreach: images">
+            <img src="" alt="" data-bind="attr: {src: $data.src, alt: $data.alt}"/>
+        </div>
+        <div class="info" data-bind="foreach: infoSet">
+            <h3 data-bind="text: $data.h3Content"></h3>
+            <p data-bind="text: $data.p0Content"></p>
+            <p data-bind="text: $data.p1Content"></p>
+        </div>
+        <div class="tool_box">
+            <div class="show_marker" data-bind="click: showMarkersClick">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+                <span>Show</span>
+            </div>
+            <div class="hide_marker" data-bind="click: hideMarkersClick">
+                <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                <span>Hide</span>
+            </div>
+        </div>
+    </div>
+    <div class="detail active" data-bind="foreach: detailSet, style: {display: detailStatus}">
+        <h3 data-bind="text: $data.h3Content"></h3>
+        <p data-bind="text: $data.pContent"></p>
+    </div>
+    <div class="list" data-bind="style: {display: listStatus}">
+        <ul data-bind="foreach: liContent">
+            <li data-bind="click: $data.liClick, text: $data.liContent, style: {display: $data.statusFlag, backgroundColor: $data.backgroundColorFlag, color: $data.fontColorFlag}"></li>
+        </ul>
+    </div>
+    <div class="toggle_menu" data-bind="click: toggleMenuClick">
+        <i class="fa fa-caret-left active" aria-hidden="true"></i>
+        <i class="fa fa-caret-right" aria-hidden="true"></i>
+    </div>
+
+</div>
+<div class="map"></div>
+
+
+<script type="text/javascript" src="./js/jquery-2.2.3.js"></script>
+<script src="./js/knockout-3.4.0.js"></script>
+<script type="text/javascript" src="./js/demou1.js"></script>
+<script async defer src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCzmh5Og0nl6UvnZ_l-G66kU2J26X9999g&callback=initMap" onerror = "googleError()"></script>
+<!--<script type="text/javascript" src="./js/demou1.js"></script>-->
+</body>
+</html>
